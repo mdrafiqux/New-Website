@@ -1,0 +1,60 @@
+@use '../util' as *;
+@use '../globals' as *;
+
+$feature-box-width: 33.333%;
+$feature-box-gutter: 15%;
+$icon-font-size: 50px;
+$icon-margin: 15px;
+.feature-box{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.feature-box-icon{
+  
+  &:first-child{
+    background-color: $orange;
+    .content{
+    color: $white;
+  }
+  }
+  &:nth-child(2){
+    background-color: $lightGray;
+  }
+  &:last-child{
+    background-color: $white;
+  }
+}
+%feature-box {
+ // width: $feature-box-width;
+  padding: $feature-box-gutter;
+  float: left;
+  .icon {
+    font-size: $icon-font-size;
+    color: $primary;
+  }
+  &.offset {
+    margin-left: $feature-box-width;
+  }
+}
+
+.feature-box-icon {
+  @extend %feature-box;
+  .icon {
+    float: left;
+    margin-right: $icon-margin;
+  }
+  .title,
+  .content {
+    overflow: hidden;
+  }
+  .title{
+    font-weight: 400;
+    line-height: normal;
+  }
+  .content{
+    color: $darkGray;
+  }
+}
+
+  
+}

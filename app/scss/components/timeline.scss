@@ -1,0 +1,90 @@
+@use '../util' as *;
+@use '../globals' as *;
+
+.orange-text{
+	color: $orange;
+}
+.green-text{
+	color: $caribbeanGreen;
+}
+.greenyellow-text{
+	color: $greenYellow;
+}
+.primary-text{
+  color: $primary;
+}
+.timeline{
+  background-color: $white;
+  padding: 1.25rem;
+  position: relative;
+  .timeline-content{
+text-align: center;
+  padding: 8rem 0;
+  font-weight: 500;
+  max-width: 50rem;
+  margin: 0 auto;
+  
+  h3.headline{
+    font-size: 3rem;
+    font-weight: 500;
+    @include breakpoint-down(medium){
+      font-size: 2rem;
+  }
+  }
+  .timeline-box{
+    display: grid;
+width: 80%;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+align-items: center;
+padding-top: 2rem;
+margin: 0 auto;
+margin-top: 2rem;
+&::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 4px;
+ border: 2px dashed $sliderbg;
+  left: 50%;
+  top: 20%;
+}
+@include breakpoint-down(medium){
+display: flex;
+flex-wrap: wrap;
+//flex-direction: column;
+}
+.timeline-image{
+  border-radius: 50%;
+  max-width: 160px;
+  border:10px solid $sliderbg;
+  z-index: 1;
+  position: relative;
+}
+.year{
+  font-weight: 700;
+  font-size: 3rem;
+}
+.timeline-text{
+  font-weight: 700;
+   @include breakpoint-down(medium){
+    text-align: center;
+  }
+}
+p{
+  @include breakpoint-down(medium){
+    text-align: center;
+  }
+}
+  }
+  }
+  .white-bg{
+    background: $white;
+z-index: 1;
+  }
+  .flex-column{
+    flex-direction: column;
+  }
+  .flex-column-reverse{
+    flex-direction: column-reverse;
+  }
+}

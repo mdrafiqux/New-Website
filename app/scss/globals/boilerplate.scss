@@ -1,0 +1,46 @@
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: radial-gradient(circle, hsl(228, 5%, 82%) 0%, hsl(228, 5%, 82%) 35%);
+	font-family: var(--poppins);
+	&.noscroll{
+		overflow: hidden;
+	}
+}
+
+
+.flex{
+	display: flex;
+	&-jc-space-between{
+		justify-content: space-between;
+	}
+	&-jc-center{
+		justify-content: center;
+	}
+	&-ai-center{
+		align-items: center;
+	}
+}
+
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+

@@ -1,0 +1,86 @@
+@use '../util' as *;
+@use '../globals' as *;
+
+.contact{
+  display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: nowrap;
+background-color: $white;
+.form-row{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+   @include breakpoint-down(medium){
+   flex-wrap: wrap;
+  }
+}
+.columns{
+    width: 50%;
+  }
+  img{
+    width: 100%;
+  }
+  display: flex;
+  align-items: center;
+justify-content: center;
+flex-wrap: nowrap;
+@include breakpoint-down(medium){
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  .columns{
+width: 100%;
+  }
+}
+background-color: $white;
+ .right{
+  padding: 0 5% 0 5%;
+  
+h3{
+    color: $white;
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  .content1{
+    padding-bottom: 3rem;
+    color: $white;
+  }
+  .content2{
+    padding-bottom: 3rem;
+    color: $darkGray;
+  }
+  .button{
+    padding: 1.5rem 3rem 1.5rem 3rem;
+    letter-spacing: 5px;
+  }
+ }
+  .contact-form{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    form{
+      position: relative;
+      input[type=text],input[type=email],input[type=tel], textarea{
+        width: 100%;
+        padding: 17px;
+        border: none;
+        outline: none;
+        background-color: $lightGray;
+        color: $darkGray;
+        font-size: 1.1rem;
+        margin-bottom: 0.7rem;
+
+      }
+      textarea{
+        resize: none;
+        height: 12.5rem;
+      }
+      .button{
+        display: inline-block;
+      }
+    }
+  }
+ .margin-right-input{
+  margin-right: 0.7rem;
+ }
+}
